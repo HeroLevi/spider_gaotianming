@@ -33,7 +33,7 @@ int main(void)
 			Spider_Response(webfd,ssl);
 		}
 
-		wchar_t * src = Spider_Create_cache("temp");
+		char * src = Spider_Create_cache("temp");
 		int fd = open("date.html",O_RDWR|O_CREAT,0664);
 		Spider_Analytic_html(&new,&old,src,fd);
 		Spider_Queue_show(&new);
